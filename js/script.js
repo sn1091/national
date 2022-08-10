@@ -149,6 +149,119 @@ const pageHistory = {
 </section>
     `
 }
+// data 패턴(2차배열) = [이미지, 타이틀]
+const pageEnvironment = {
+    data : ()=>{
+        return {
+            item : [
+                ["environ_news_1.jpg","environment_news_1"],
+                ["environ_news_2.jpg","environment_news_2"],
+                ["environ_news_3.jpg","environment_news_3"],
+                ["environ_news_4.jpg","environment_news_4"],
+                ["environ_news_5.jpg","environment_news_5"],
+                ["environ_news_6.jpg","environment_news_6"],
+                ["environ_news_7.jpg","environment_news_7"],
+                ["environ_news_8.jpg","environment_news_8"],
+                ["environ_news_9.jpg","environment_news_9"],
+                ["environ_news_10.jpg","environment_news_10"],
+                ["environ_news_11.jpg","environment_news_11"],
+                ["environ_news_12.jpg","environment_news_12"]
+            ]
+        }
+    },
+    template : `
+    <section id="sub_item">
+    <div class="wrap">
+        <h2>environment</h2>
+        <div class="content">
+
+            <div v-for="list in item" class="box">
+                <div class="bg_img" :style="'background-image:url(./img/environment/'+list[0]+')'">
+                </div>
+                <div class="info"><h3>{{list[1]}}</h3></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    `
+}
+
+// data 패턴(2차배열) = [이미지, 타이틀]
+const pageScience = {
+    data : ()=>{
+        return {
+            item : [
+                ["science_news_1.jpg","science_news_1"],
+                ["science_news_2.jpg","science_news_2"],
+                ["science_news_3.jpg","science_news_3"],
+                ["science_news_4.jpg","science_news_4"],
+                ["science_news_5.jpg","science_news_5"],
+                ["science_news_6.jpg","science_news_6"],
+                ["science_news_7.jpg","science_news_7"],
+                ["science_news_8.jpg","science_news_8"],
+                ["science_news_9.jpg","science_news_9"],
+                ["science_news_10.jpg","science_news_10"],
+                ["science_news_11.jpg","science_news_11"],
+                ["science_news_12.jpg","science_news_12"]
+            ]
+        }
+    },
+    template : `
+    <section id="sub_item">
+    <div class="wrap">
+        <h2>science</h2>
+        <div class="content">
+
+            <div v-for="list in item" class="box">
+                <div class="bg_img" :style="'background-image:url(./img/science/'+list[0]+')'">
+                </div>
+                <div class="info"><h3>{{list[1]}}</h3></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    `
+}
+
+// data 패턴(2차배열) = [이미지, 타이틀]
+const pageTravel = {
+    data : ()=>{
+        return {
+            item : [
+                ["travel_news_1.jpg","travel_news_1"],
+                ["travel_news_2.jpg","travel_news_2"],
+                ["travel_news_3.jpg","travel_news_3"],
+                ["travel_news_4.jpg","travel_news_4"],
+                ["travel_news_5.jpg","travel_news_5"],
+                ["travel_news_6.jpg","travel_news_6"],
+                ["travel_news_7.jpg","travel_news_7"],
+                ["travel_news_8.jpg","travel_news_8"],
+                ["travel_news_9.jpg","travel_news_9"],
+                ["travel_news_10.jpg","travel_news_10"],
+                ["travel_news_11.jpg","travel_news_11"],
+                ["travel_news_12.jpg","travel_news_12"]
+            ]
+        }
+    },
+    template : `
+    <section id="sub_item">
+    <div class="wrap">
+        <h2>travel</h2>
+        <div class="content">
+
+            <div v-for="list in item" class="box">
+                <div class="bg_img" :style="'background-image:url(./img/travel/'+list[0]+')'">
+                </div>
+                <div class="info"><h3>{{list[1]}}</h3></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    `
+}
 
 const reRoutes = [
     {
@@ -162,8 +275,20 @@ const reRoutes = [
     {
         path : "/history",
         component : pageHistory
-    }
+    },
     // 3개 메뉴는 과제
+    {
+        path : "/environment",
+        component : pageEnvironment
+    },
+    {
+        path : "/science",
+        component : pageScience
+    },
+    {
+        path : "/travel",
+        component : pageTravel
+    }
 ];
 
 const router1 = new VueRouter({
